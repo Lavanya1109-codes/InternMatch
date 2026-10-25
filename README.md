@@ -90,4 +90,4 @@ InternMatch is a web-based platform that helps students discover internship oppo
 
 ### Use Case Diagram
 
-![InternMatch Use Case Diagram](docs/use-case-diagram.png)
+![InternMatch Use Case Diagram](docs/use-case-diagram.png.png)
