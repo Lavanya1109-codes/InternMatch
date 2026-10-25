@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>InternMatch - Smart Internship Platform</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        <i class="fa-solid fa-briefcase"></i>
+        InternMatch
+    </div>
+
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#internships">
+            Find Internships
+        </a>
+
+        <a href="#dashboard">
+            Dashboard
+        </a>
+
+        <a href="#skills">
+            Skill Gap
+        </a>
+
+    </nav>
+
+
+    <div class="auth-buttons">
+
+        <button
+            id="loginButton"
+            class="login-btn"
+            onclick="openLoginModal()">
+
+            Login
+
+        </button>
+
+
+        <button
+            id="logoutButton"
+            class="logout-btn"
+            onclick="logout()"
+            style="display:none;">
+
+            Logout
+
+        </button>
+
+
+        <button
+            class="register-btn"
+            onclick="openRegisterModal()">
+
+            Create Account
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section
+    id="home"
+    class="hero">
+
+    <div class="hero-content">
+
+        <span class="hero-label">
+            SMART INTERNSHIP PLATFORM
+        </span>
+
+
+        <h1>
+            Find the Internship
+            <span>That Fits You</span>
+        </h1>
+
+
+        <p>
+            Discover internships based on your
+            skills, interests, location and career goals.
+        </p>
+
+
+        <div class="search-box">
+
+            <div class="search-field">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Role, skill or company">
+
+            </div>
+
+
+            <div class="search-field">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <input
+                    type="text"
+                    id="locationFilter"
+                    placeholder="Location">
+
+            </div>
+
+
+            <button
+                onclick="searchInternships()">
+
+                Search Internships
+
+            </button>
+
+        </div>
+
+
+        <div class="popular">
+
+            <strong>Popular:</strong>
+
+            <button onclick="selectDomain('Web Development')">
+                Web Development
+            </button>
+
+            <button onclick="selectDomain('Java')">
+                Java
+            </button>
+
+            <button onclick="selectDomain('Python')">
+                Python
+            </button>
+
+            <button onclick="selectDomain('Data Science')">
+                Data Science
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= INTERNSHIPS ================= -->
+
+<section
+    id="internships"
+    class="internship-section">
+
+    <div class="section-heading">
+
+        <div>
+
+            <span>
+                OPPORTUNITIES
+            </span>
+
+            <h2>
+                Recommended Internships
+            </h2>
+
+        </div>
+
+
+        <select
+            id="sortSelect"
+            onchange="sortInternships()">
+
+            <option value="latest">
+                Latest
+            </option>
+
+            <option value="match">
+                Best Match
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <div
+        id="internshipContainer"
+        class="internship-grid">
+
+        <div class="loading">
+            Loading internships...
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= DASHBOARD ================= -->
+
+<section
+    id="dashboard"
+    class="dashboard-section">
+
+    <div class="section-heading">
+
+        <div>
+
+            <span>
+                STUDENT DASHBOARD
+            </span>
+
+            <h2>
+                Track Your Applications
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="applicationsContainer"
+        class="applications-container">
+
+        <p>
+            Login to view your applications.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= SKILL GAP ================= -->
+
+<section
+    id="skills"
+    class="skills-section">
+
+    <div class="section-heading">
+
+        <div>
+
+            <span>
+                SMART ANALYSIS
+            </span>
+
+            <h2>
+                Skill Gap Analysis
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="skill-grid">
+
+        <div class="skill-box">
+
+            <h3>
+                <i class="fa-solid fa-circle-check"></i>
+                Your Skills
+            </h3>
+
+
+            <div class="skill-tags">
+
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Java</span>
+                <span>SQL</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="skill-box">
+
+            <h3>
+                <i class="fa-solid fa-arrow-up"></i>
+                Skills To Improve
+            </h3>
+
+
+            <div class="skill-tags">
+
+                <span>Spring Boot</span>
+                <span>React</span>
+                <span>Node.js</span>
+
+            </div>
+
+
+            <p class="skill-message">
+
+                Improve these 3 skills to become
+                eligible for more internships.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+    <h2>
+        Start Your Internship Journey
+    </h2>
+
+    <p>
+        Build your profile and discover opportunities
+        that match your skills.
+    </p>
+
+
+    <button onclick="openRegisterModal()">
+
+        Create Your Profile
+
+    </button>
+
+</section>
+
+
+
+<!-- ================= STATS ================= -->
+
+<section class="stats">
+
+    <div class="stat-card">
+
+        <h2>10,000+</h2>
+
+        <p>Internships</p>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <h2>5,000+</h2>
+
+        <p>Companies</p>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <h2>25,000+</h2>
+
+        <p>Students</p>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <h2>500+</h2>
+
+        <p>Locations</p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div>
+
+        <h3>
+            <i class="fa-solid fa-briefcase"></i>
+            InternMatch
+        </h3>
+
+        <p>
+            Smart internship discovery and
+            application platform.
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <h4>Platform</h4>
+
+        <a href="#internships">
+            Find Internships
+        </a>
+
+        <a href="#dashboard">
+            Dashboard
+        </a>
+
+        <a href="#skills">
+            Skill Gap
+        </a>
+
+    </div>
+
+
+    <div>
+
+        <h4>For Students</h4>
+
+        <a href="#">
+            Build Profile
+        </a>
+
+        <a href="#">
+            Upload Resume
+        </a>
+
+        <a href="#">
+            Track Applications
+        </a>
+
+    </div>
+
+</footer>
+
+
+
+<!-- ================= LOGIN MODAL ================= -->
+
+<div
+    id="loginModal"
+    class="modal">
+
+    <div class="modal-content">
+
+        <span
+            class="close"
+            onclick="closeLoginModal()">
+
+            &times;
+
+        </span>
+
+
+        <h2>
+            Welcome Back
+        </h2>
+
+
+        <p>
+            Login to your InternMatch account.
+        </p>
+
+
+        <input
+            type="email"
+            id="loginEmail"
+            placeholder="Email">
+
+
+        <input
+            type="password"
+            id="loginPassword"
+            placeholder="Password">
+
+
+        <button
+            onclick="loginUser()">
+
+            Login
+
+        </button>
+
+
+        <p
+            id="loginMessage"
+            class="message">
+        </p>
+
+
+        <p class="switch">
+
+            Don't have an account?
+
+            <a
+                href="#"
+                onclick="openRegisterModal()">
+
+                Create Account
+
+            </a>
+
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= REGISTER MODAL ================= -->
+
+<div
+    id="registerModal"
+    class="modal">
+
+    <div class="modal-content">
+
+        <span
+            class="close"
+            onclick="closeRegisterModal()">
+
+            &times;
+
+        </span>
+
+
+        <h2>
+            Create Account
+        </h2>
+
+
+        <p>
+            Start discovering internships.
+        </p>
+
+
+        <input
+            type="text"
+            id="registerName"
+            placeholder="Full Name">
+
+
+        <input
+            type="email"
+            id="registerEmail"
+            placeholder="Email">
+
+
+        <input
+            type="password"
+            id="registerPassword"
+            placeholder="Password">
+
+
+        <button
+            onclick="registerUser()">
+
+            Create Account
+
+        </button>
+
+
+        <p
+            id="registerMessage"
+            class="message">
+        </p>
+
+
+        <p class="switch">
+
+            Already have an account?
+
+            <a
+                href="#"
+                onclick="openLoginModal()">
+
+                Login
+
+            </a>
+
+        </p>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

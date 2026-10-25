@@ -1,0 +1,28 @@
+{
+  "name": "internship-platform-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Smart Internship Discovery and Application Platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "internship",
+    "student",
+    "job-portal",
+    "internship-platform",
+    "express",
+    "mysql"
+  ],
+  "author": "InternMatch Team",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.14.3"
+  }
+}
