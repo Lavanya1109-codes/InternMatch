@@ -86,3 +86,8 @@ InternMatch is a web-based platform that helps students discover internship oppo
 - Skill-based internship matching.
 - Interview scheduling and notifications.
 
+## UML Diagrams
+
+### Use Case Diagram
+
+![InternMatch Use Case Diagram](docs/use-case-diagram.png)
