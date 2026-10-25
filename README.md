@@ -1,9 +1,6 @@
 
 # InternMatch – Smart Internship Platform
 
-## Scrum Master
-**Scrum Master:** [Enter Scrum Master's Name]
-
 ## Live Website
 🔗 https://internmatch-wmt8.onrender.com/
 
@@ -13,7 +10,15 @@
 ## Project Overview
 InternMatch is a web-based platform that helps students discover internship opportunities, apply online, save internships, and track their application status.
 
-## 1. Product Backlog
+## 1. Scrum Master Responsibilities
+- Organize sprint planning meetings.
+- Help the team understand sprint goals.
+- Track progress and identify blockers.
+- Encourage team communication.
+- Facilitate sprint reviews and retrospectives.
+- Support continuous improvement.
+  
+## 2. Product Backlog
 
 | ID | Feature | Priority | Status |
 |---|---|---|---|
@@ -27,7 +32,7 @@ InternMatch is a web-based platform that helps students discover internship oppo
 | PB08 | Skill-based internship matching | Medium | Planned |
 | PB09 | Interview notifications | Medium | Planned |
 
-## 2. Sprint Planning
+## 3. Sprint Planning
 
 ### Sprint 1 – Setup and Authentication
 - Set up frontend, backend, and database.
@@ -47,14 +52,14 @@ InternMatch is a web-based platform that helps students discover internship oppo
 - Verify database connectivity.
 - Deploy the application using Render.
 
-## 3. Team Collaboration
+## 4. Team Collaboration
 - Divide tasks among team members.
 - Communicate progress and discuss problems.
 - Use GitHub to manage source code.
 - Review changes and integrate modules.
 - Test the application collaboratively.
 
-## 4. Task Tracking
+## 5. Task Tracking
 
 | Task | Status |
 |---|---|
@@ -66,13 +71,6 @@ InternMatch is a web-based platform that helps students discover internship oppo
 | Deployment | Deployed |
 | Company dashboard | Planned |
 
-## 5. Scrum Master Responsibilities
-- Organize sprint planning meetings.
-- Help the team understand sprint goals.
-- Track progress and identify blockers.
-- Encourage team communication.
-- Facilitate sprint reviews and retrospectives.
-- Support continuous improvement.
 
 ## 6. Technology Stack
 - **Frontend:** HTML, CSS, JavaScript
