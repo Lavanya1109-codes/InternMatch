@@ -124,4 +124,3 @@ The Scrum Master facilitates the Scrum process and helps the team work effective
 **Live Application:** https://internmatch-wmt8.onrender.com/
 
 **GitHub Repository:** https://github.com/Lavanya1109-codes/InternMatch
-
